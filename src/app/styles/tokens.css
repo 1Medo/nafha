@@ -1,0 +1,252 @@
+:root {
+  /* ===========================
+     PRIMITIVES (raw color scales)
+     =========================== */
+
+  /* Brown */
+  --Brown-100: #f6e3d5;
+  --Brown-200: #eec8aa;
+  --Brown-300: #e5ac80;
+  --Brown-400: #dc9056;
+  --Brown-500: #cc702a;
+  --Brown-600: #a65b22;
+  --Brown-700: #7f461a;
+  --Brown-800: #552f11;
+  --Brown-900: #2a1709;
+
+  /* Neutrals */
+  --Neutrals-50:  #ffffef;
+  --Neutrals-100: #fbfbea;
+  --Neutrals-200: #dadaca;
+  --Neutrals-300: #babaaa;
+  --Neutrals-400: #9b9a8c;
+  --Neutrals-500: #7d7a6f;
+  --Neutrals-600: #615c53;
+  --Neutrals-700: #463e39;
+  --Neutrals-800: #2c2521;
+  --Neutrals-900: #150c04;
+
+  /* Blue */
+  --Blue-100: #d5e3f6;
+  --Blue-200: #aac6ee;
+  --Blue-300: #80aae5;
+  --Blue-400: #568edc;
+  --Blue-500: #2a6dcc;
+  --Blue-600: #235ba9;
+  --Blue-700: #1a447f;
+  --Blue-800: #112d55;
+  --Blue-900: #09172a;
+
+  /* Red */
+  --Red-100: #f6d5d5;
+  --Red-200: #eeaaac;
+  --Red-300: #e58082;
+  --Red-400: #dc5658;
+  --Red-500: #cc2a2d;
+  --Red-600: #a92325;
+  --Red-700: #7f1a1c;
+  --Red-800: #551113;
+  --Red-900: #2a0909;
+
+  /* Green */
+  --Green-100: #d5f6df;
+  --Green-200: #aaeec0;
+  --Green-300: #80e5a0;
+  --Green-400: #56dc80;
+  --Green-500: #2acc5d;
+  --Green-600: #23a94d;
+  --Green-700: #1a7f3a;
+  --Green-800: #115527;
+  --Green-900: #092a13;
+
+  /* Orange */
+  --Orange-100: #fee4cd;
+  --Orange-200: #fdc99b;
+  --Orange-300: #fbae6a;
+  --Orange-400: #fa9338;
+  --Orange-500: #d36505;
+  --Orange-600: #c76005;
+  --Orange-700: #954804;
+  --Orange-800: #643002;
+  --Orange-900: #321801;
+
+  /* ===========================
+     SEMANTIC TOKENS (from JSON)
+     keep names exactly as token keys
+     =========================== */
+
+  /* Brand */
+  --Brand-primary: var(--Brown-500);
+  --Brand-secondary: var(--Brown-600);
+  --Brand-tertiary: var(--Brown-700);
+
+  /* Background */
+  --Background-bg-primary: var(--Neutrals-100);
+  --Background-bg-secondary: var(--Neutrals-200);
+  --Background-bg-tertiary: var(--Neutrals-50);
+  --Background-bg-surface: var(--Neutrals-300);
+  --Background-bg-inverse: var(--Neutrals-800);
+  /* border-color references Background.bg-secondary in JSON -> resolve to Neutrals-200 */
+  --Background-border-color: var(--Background-bg-secondary);
+
+  /* Text */
+  --Text-text-primary: var(--Neutrals-800);
+  --Text-text-secondary: var(--Neutrals-700);
+  --Text-text-muted: var(--Neutrals-400);
+  --Text-text-inverse: var(--Neutrals-100);
+
+  /* Inputs */
+  --Inputs-input-bg: var(--Background-bg-primary);
+  --Inputs-input-placeholder: var(--Text-text-muted);
+  --Inputs-input-bg-disabled: var(--Background-bg-secondary);
+  --Inputs-input-text: var(--Text-text-primary);
+  --Inputs-input-supporting-text: var(--Neutrals-600);
+  --Inputs-input-default-border: var(--Background-bg-surface);
+  --Inputs-input-hover-border: var(--Brown-300);
+  --Inputs-input-focus-border: var(--Brown-500);
+  --Inputs-input-error-border: var(--Red-400);
+  --Inputs-input-success-border: var(--Green-600);
+  --Inputs-dropdown-bg: var(--Background-bg-primary);
+  --Inputs-dropdown-option-hover-bg: var(--Background-bg-secondary);
+  --Inputs-dropdown-option-selected-bg: var(--Brand-primary);
+  --Inputs-dropdown-option-selected-text: var(--Text-text-inverse);
+  --Inputs-dropdown-option-text: var(--Text-text-primary);
+  --Inputs-dropdown-option-icon: var(--Text-text-primary);
+
+  /* Buttons */
+  --Buttons-button-primary-default-bg: var(--Brand-primary);
+  --Buttons-button-primary-default-text: var(--Background-bg-primary);
+  --Buttons-button-primary-default-icon: var(--Background-bg-primary);
+  --Buttons-button-primary-hover-bg: var(--Brand-secondary);
+  --Buttons-button-primary-hover-text: var(--Background-bg-primary);
+  --Buttons-button-primary-hover-icon: var(--Background-bg-primary);
+  --Buttons-button-primary-focus-bg: var(--Brand-tertiary);
+  --Buttons-button-primary-focus-text: var(--Background-bg-primary);
+  --Buttons-button-primary-focus-icon: var(--Background-bg-primary);
+
+  --Buttons-button-secondary-border: var(--Brand-primary);
+  --Buttons-button-secondary-text: var(--Brand-primary);
+  --Buttons-button-secondary-icon: var(--Brand-primary);
+  --Buttons-button-secondary-hover-bg: var(--Brown-100);
+  --Buttons-button-secondary-focus-bg: var(--Brown-200);
+  --Buttons-button-secondary-focus-text: var(--Brand-secondary);
+  --Buttons-button-secondary-focus-icon: var(--Brand-secondary);
+  --Buttons-button-secondary-focus-border: var(--Brand-secondary);
+
+  --Buttons-button-footer-text-color: var(--Neutrals-400);
+  --Buttons-button-footer-disabled-text-color: var(--Text-text-inverse);
+  --Buttons-toggles-border: var(--Brown-200);
+
+  /* Functional -> Info */
+  --Functional-Info-info-bg: var(--Blue-100);
+  --Functional-Info-info-border: var(--Blue-200);
+  --Functional-Info-info-text: var(--Blue-700);
+  --Functional-Info-info-text-inverse: var(--Blue-100);
+  --Functional-Info-info-icon: var(--Blue-700);
+  --Functional-Info-info-button-bg: var(--Blue-700);
+  --Functional-Info-info-button-bg-inverse: var(--Blue-200);
+  --Functional-Info-info-button-hover: var(--Blue-500);
+
+  /* Functional -> Success */
+  --Functional-Success-success-bg: var(--Green-100);
+  --Functional-Success-success-border: var(--Green-200);
+  --Functional-Success-success-text: var(--Green-700);
+  --Functional-Success-success-text-inverse: var(--Green-100);
+  --Functional-Success-success-icon: var(--Green-700);
+  --Functional-Success-success-button-bg: var(--Green-700);
+  --Functional-Success-success-button-bg-inverse: var(--Green-200);
+  --Functional-Success-success-button-hover: var(--Green-500);
+
+  /* Functional -> Error */
+  --Functional-Error-error-bg: var(--Red-100);
+  --Functional-Error-error-border: var(--Red-200);
+  --Functional-Error-error-text: var(--Red-700);
+  --Functional-Error-error-text-inverse: var(--Red-100);
+  --Functional-Error-error-icon: var(--Red-400);
+  --Functional-Error-error-button-bg: var(--Red-700);
+  --Functional-Error-error-button-bg-inverse: var(--Red-200);
+  --Functional-Error-error-button-hover: var(--Red-500);
+
+  /* Functional -> Warning */
+  --Functional-Warning-warning-bg: var(--Orange-100);
+  --Functional-Warning-warning-border: var(--Orange-200);
+  --Functional-Warning-warning-text: var(--Orange-700);
+  --Functional-Warning-warning-text-inverse: var(--Orange-100);
+  --Functional-Warning-warning-icon: var(--Orange-700);
+  --Functional-Warning-warning-button-bg: var(--Orange-700);
+  --Functional-Warning-warning-button-bg-inverse: var(--Orange-200);
+  --Functional-Warning-warning-button-hover: var(--Orange-500);
+
+  /* ===========================
+     TYPOGRAPHY tokens (exact from JSON)
+     =========================== */
+  --Typography-size-S: 12px;
+  --Typography-size-M: 16px;
+  --Typography-size-L: 24px;
+  --Typography-size-XL: 36px;
+  --Typography-size-2XL: 60px;
+
+  --Typography-line-height-S: 0;
+  --Typography-line-height-M: 16px;
+  --Typography-line-height-L: 32px;
+  --Typography-line-height-XL: 40px;
+  --Typography-line-height-2XL: 64px;
+
+  /* semantic typography (H1/H2/H3 etc) referencing above */
+  --Typography-H1-size: var(--Typography-size-2XL);
+  --Typography-H1-line-height: var(--Typography-line-height-2XL);
+  --Typography-H2-size: var(--Typography-size-XL);
+  --Typography-H2-line-height: var(--Typography-line-height-XL);
+  --Typography-H3-size: var(--Typography-size-L);
+  --Typography-H3-line-height: var(--Typography-line-height-L);
+  --Typography-Subtitle-size: var(--Typography-size-L);
+  --Typography-Subtitle-line-height: var(--Typography-line-height-L);
+  --Typography-Body-size: var(--Typography-size-M);
+  --Typography-Body-line-height: var(--Typography-line-height-M);
+  --Typography-ButtonText-size: var(--Typography-size-M);
+  --Typography-ButtonText-line-height: var(--Typography-line-height-M);
+  --Typography-Small-size: var(--Typography-size-S);
+  --Typography-Small-line-height: var(--Typography-line-height-M);
+
+  /* ===========================
+     SPACING (Spacing.Default.tokens.json)
+     =========================== */
+  --Spacing-32: 32px;
+  --Spacing-36: 36px;
+  --Spacing-40: 40px;
+  --Spacing-44: 44px;
+  --Spacing-48: 48px;
+  --Spacing-52: 52px;
+  --Spacing-56: 56px;
+  --Spacing-60: 60px;
+  --Spacing-64: 64px;
+  --Spacing-68: 68px;
+  --Spacing-72: 72px;
+  --Spacing-76: 76px;
+  --Spacing-80: 80px;
+
+  --Spacing-XXS: 4px;
+  --Spacing-XS: 8px;
+  --Spacing-S: 12px;
+  --Spacing-M: 16px;
+  --Spacing-L: 20px;
+  --Spacing-XL: 24px;
+  --Spacing-XXL: 28px;
+
+  /* ===========================
+     BORDER radii & widths (Border.Default.tokens.json)
+     =========================== */
+  --Border-Radius-XXS: 4px;
+  --Border-Radius-XS: 8px;
+  --Border-Radius-S: 12px;
+  --Border-Radius-M: 16px;
+  --Border-Radius-L: 20px;
+  --Border-Radius-XL: 24px;
+  --Border-Radius-XXL: 28px;
+  --Border-Radius-XXXL: 32px;
+
+  --Border-Width-S: 1px;
+  --Border-Width-M: 2px;
+  --Border-Width-L: 3px;
+  --Border-Width-XL: 4px;
+}

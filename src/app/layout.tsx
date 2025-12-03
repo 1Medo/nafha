@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Almarai } from "@next/font/google";
 import "./globals.css";
+import {Footer} from './components/footer';
+import { Header } from "./components/header";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+// إعداد الخط
+const almarai = Almarai({
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+  variable: "--font-almarai",
 });
 
 export const metadata: Metadata = {
@@ -23,9 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+    <html lang="ar" className={almarai.variable} dir="rtl">
+      <body className="min-h-screen flex flex-col">
+        <Header />
+          <main className="flex-1">
+            {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

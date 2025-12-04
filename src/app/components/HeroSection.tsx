@@ -4,6 +4,7 @@ import Button from "./atoms/Button";
 import { CiShoppingBasket } from "react-icons/ci";
 import { IoChevronBackOutline } from "react-icons/io5";
 import BrandsBar from "./BrandsBar";
+import Link from "next/link";
 
 
 
@@ -63,8 +64,10 @@ export default function HeroSection() {
           "flex gap-3 justify-center",
           "mobile:flex-col sm:justify-start"
         )}>
-          <Button variant="primary" trailingIcon={<CiShoppingBasket size={20}/>} className="mobile:w-full">تسوق الآن</Button>
-          <Button variant="secondary" trailingIcon={<IoChevronBackOutline size={20}/>} className="mobile:w-full">عرض المزيد</Button>
+          <Link href={"/products"}>
+            <Button variant="primary" trailingIcon={<CiShoppingBasket size={20}/>} className="mobile:w-full">تسوق الآن</Button>
+          </Link>
+            <Button variant="secondary" trailingIcon={<IoChevronBackOutline size={20}/>} className="mobile:w-full">عرض المزيد</Button>
         </div>
 
       </div>

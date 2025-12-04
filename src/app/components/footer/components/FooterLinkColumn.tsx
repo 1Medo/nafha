@@ -4,7 +4,7 @@ import { PiCaretDoubleLeft } from "react-icons/pi";
 
 
 type FooterLink = {
-  title?: string;  // مش اجباري
+  title?: string; 
   link: string;
   linkName: string;
 }
@@ -12,9 +12,10 @@ type FooterLink = {
 type FooterLinkColumnProps = {
   label: string;
   links: FooterLink[];
+  target?: string;
 }
 
-export default function FooterLinkColumn({ label, links }: FooterLinkColumnProps) {
+export default function FooterLinkColumn({ label, links, target }: FooterLinkColumnProps) {
   return (
     <div className={cn("footer-column [color:var(--Text-text-inverse)]",
         "flex flex-col gap-6"
@@ -29,7 +30,7 @@ export default function FooterLinkColumn({ label, links }: FooterLinkColumnProps
                 <span className={cn("text-body")}>{item.title}:</span>
               ) : null}
             </span>
-            <Link href={item.link} className={cn("[color:var(--Buttons-button-footer-text-color)] hover:[color:var(--Brand-primary)] text-body transition-colors",
+            <Link href={item.link} target={target} className={cn("[color:var(--Buttons-button-footer-text-color)] hover:[color:var(--Brand-primary)] text-body transition-colors",
                 "flex gap-2 items-center"
             )}>
                 <PiCaretDoubleLeft />

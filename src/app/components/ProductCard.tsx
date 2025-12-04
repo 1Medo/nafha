@@ -34,7 +34,7 @@ export default function ProductCard({big = false, brand, perfumeName, price, isN
         )}>
             
             {isNew && <div className={cn("new",
-            "absolute left-4 top-4 text-small font-bold [color:var(--Text-text-inverse)] bg-Background-bg-inverse px-3 rounded-2xl z-50"
+            "absolute left-4 top-4 text-small font-bold [color:var(--Text-text-inverse)] bg-Background-bg-inverse px-3 rounded-2xl z-40"
             )}>
                 جديد
             </div>}

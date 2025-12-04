@@ -10,7 +10,7 @@ export default function Comments() {
             />
     )
     return (
-        <>
+        <div id="feedback">
             <SectionBar title='آراء العملاء' desc='يتم استعراض بعض تعليقات العملاء'/>
 
 <div className={cn("container",
@@ -20,7 +20,7 @@ export default function Comments() {
     )}>
         {comments}
 </div>
-    </>
+    </div>
     )
     
 }

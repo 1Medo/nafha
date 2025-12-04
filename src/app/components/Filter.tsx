@@ -62,7 +62,7 @@ function FilterSection<T extends Record<string, string | number>>({
   value,
   onChange
 }: FilterSectionProps<T>) {
-  const items = showMoreState ? list : list.slice(0,5);
+const items = showMore ? (showMoreState ? list : list.slice(0,5)) : list;
 
   return (
     <AccordionItem value={name}>

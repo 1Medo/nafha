@@ -20,7 +20,7 @@ export default function FooterLinks() {
                 {link:"/", linkName:"الدعم الفني"},
                 ]}/>
             <FooterLinkColumn target="_blank" label="روابط مهمة" links={[
-                {link:"/", title:"واتساب", linkName:"https://wa.me/0096123456789123"},
+                {link:"https://wa.me/0096123456789123", title:"واتساب", linkName:"0096123456789123"},
                 {link:"https://mail.google.com/mail/?view=cm&to=nafha.team@gmail.com", title:"البريد", linkName:"nafha.team@gmail.com"},
                 ]}/>
         </div>

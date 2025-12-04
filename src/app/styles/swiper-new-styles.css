@@ -1,0 +1,8 @@
+:root {
+    --swiper-theme-color: #cc702a;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    color: #7D7A6F;
+    padding: 10px;
+}

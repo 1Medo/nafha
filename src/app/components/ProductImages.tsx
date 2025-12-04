@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import type { Swiper as SwiperType } from "swiper";
+import "../styles/swiper-new-styles.css";
 
 export default function ProductImages({ images }: { images: string[] }) {
   const [activeIndex, setActiveIndex] = useState(0);

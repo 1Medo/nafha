@@ -3,6 +3,7 @@ import CategoryButton from './CategoryButton';
 import { cn } from '@/lib/utils';
 import SectionBar from './SectionBar';
 import SliderWrapper from './SliderWrapper';
+import "../styles/swiper-new-styles.css";
 
 
 export default function Categories() {

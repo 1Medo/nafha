@@ -5,7 +5,7 @@ import Button from "./atoms/Button";
 import { CiGrid41, CiBoxList } from "react-icons/ci";
 import { PiFunnel } from "react-icons/pi";
 import { cn } from "@/lib/utils";
-import AllProductsList from "@/AllProductsList";
+import AllProductsList from "@/app/components/AllProductsList";
 import { BsSortDown, BsSortUp } from "react-icons/bs";
 
 type ProductsBarProps = {

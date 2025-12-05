@@ -1,6 +1,6 @@
-import { cn } from "./lib/utils";
-import products from "./constants/products";
-import ProductCard from "./app/components/ProductCard";
+import { cn } from "../../lib/utils";
+import products from "../../constants/products";
+import ProductCard from "./ProductCard";
 type AllProductsList = {
     isList: boolean;
 }
